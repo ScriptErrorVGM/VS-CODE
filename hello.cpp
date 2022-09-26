@@ -1,20 +1,42 @@
-
+/*
++Описать тип-структуру «комплексное число», хранящую действительную и мнимую
+части комплексного числа.
+Описать функции для умножения и деления комплексных чисел, которые принимают в
+качестве параметров два числа и возвращают число в качестве результата.
+Описать функцию, принимающую комплексное число в качестве параметра и «красиво»
+выводящую его на консоль.
+Описать перечисление для задания вида комплексного числа: действительное, мнимое,
+комплексное. Описать функцию, принимающую комплексное число в качестве параметра
+и возвращающую вид числа. 
+*/
 
 #include <iostream>
+#include "number.cpp"
+#include "number.h"
 
 using namespace std;
 
 int main()
 {
-    cout << " Hello";
-    cout << " Hello";
-    cout << " Hello";
-    /*vector<string> msg {"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
+    Number h1;
+    h1.x = 2;
+    h1.y = 3;
+    //infoNumber(h1);
 
-    for (const string& word : msg)
-    {
-        cout << word << " Hello";
-    }
-    cout << endl;*/
+    Number parr1;
+    parr1.x = 1;
+    parr1.y = 1;
+
+    Number parr2;
+    parr2.x = 6;
+    parr2.y = 7;
+
+    double res;
+    calcNumber(parr1,parr2, res);
+    cout << res << '\n';
+    
+
+    Output(h1);
+
     return 0;
 }
