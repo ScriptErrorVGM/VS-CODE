@@ -2,6 +2,7 @@
 #define NUMBER_H
 
 #include <iostream>
+#include "typenum.h"
 
 struct Number
 {
@@ -9,7 +10,8 @@ struct Number
     double y;
 };
 
-void infoNumber(Number h);
-void calcNumber(Number parr1, Number parr2, double &result);
+Number div(Number a, Number b);
+Number multi(Number a, Number b);
+typeNum typeN(Number a);
 
 #endif

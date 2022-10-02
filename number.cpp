@@ -3,27 +3,54 @@
 #include <complex>
 
 
-void infoNumber(Number h)
+Number div(Number a, Number b)
 {
     
+    std::complex<double> A(a.x,a.y);
+    std::complex<double> B(b.x,b.y);
+    Number x;
+
+    double real = std::real(std::complex(A / B));
+    double image = std::imag(std::complex(A / B));
+    x = {real,image};
+    
+    return x;
 }
 
 
-void calcNumber(Number parr1, Number parr2, double &result)
+Number multi(Number a, Number b)
 {
-    //std::complex<double> result;
-    std::complex<double> h1(parr1.x,parr1.y);
-    std::complex<double> h2(parr2.x,parr2.y);
-    std::cout   << "diveded = "<< h1 / h2 <<'\n';
-    //std::cout   << "multiplyed = " <<H1 * H2 <<'\n';
+    std::complex<double> A(a.x,a.y);
+    std::complex<double> B(b.x,b.y);
+    Number x;
 
-    //double x = real(mycomplex);
-    //double y = imag(mycomplex);
-    result = norm(h1 / h2);
+    double real = std::real(std::complex(A * B));
+    double image = std::imag(std::complex(A * B));
+    x = {real,image};
+    
+    return x;
 }
+
+
+typeNum typeN(Number a)
+{
+    typeNum x;
+    
+    if(a.y == 0){
+        x = REAL;
+    } else if(a.x == 0) {
+        x = IMAGINARY;
+    } else {
+        x = COMPLEX;
+    }
+    return x;
+}
+
 
 void Output(Number h)
-{
-    printf("z = %.f + (%.f*i)\n", h.x, h.y);
+{   
+    std::cout << h.x << " "  << h.y << std::endl;
+    
+    printf("z = %.2f + (%.2f*i)\n", h.x, h.y);
 }
 
