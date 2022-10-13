@@ -29,10 +29,10 @@ int main()
 
     Number temp;
     temp = div(parr1,parr2);
-    Output(temp);
+    Output(temp); //  z = 0.15 + (-0.01*i)
     
     temp = multi(parr1,parr2);
-    Output(temp);
+    Output(temp); //  z = -1.00 + (13.00*i)
 
     Number parr3;
     parr3.real = 1;
@@ -42,7 +42,7 @@ int main()
     tn1 = typeN(parr3);
     
 
-    std::cout << "Type of input number is (REAL = 0 , IMAGINARY = 1, COMPLEX = 2) : " << tn1 << "\n";
+    std::cout << "Type of input number is (REAL = 0 , IMAGINARY = 1, COMPLEX = 2) : " << tn1 << "\n"; // Type of input number is (REAL = 0 , IMAGINARY = 1, COMPLEX = 2) : 0
 
     return 0;
 }
