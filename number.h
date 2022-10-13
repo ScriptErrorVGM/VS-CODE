@@ -6,8 +6,8 @@
 
 struct Number
 {
-    double x;
-    double y;
+    double real;
+    double imag;
 };
 
 Number div(Number a, Number b);
