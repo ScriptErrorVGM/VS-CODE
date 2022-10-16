@@ -19,16 +19,22 @@ int main()
     Phrase ph1;
     Phrase ph2("Hey, hello there!");
 
-    ph1.info();
-    ph2.info();
+    ph1.info();// NO PHRASE
+    ph2.info();// Hey, hello there!
 
-    cout << "Number of symbols in ph2 is " << ph2.symbolNumbers() << endl;
+    cout << "Number of symbols in ph2 is " << ph2.symbolNumbers() << endl; // Number of symbols in ph2 is 15
 
-    cout << "Max word in ph2 is " << ph2.isMax() << endl;
-    cout << "Min word in ph2 is " << ph2.isMin() << endl;
+    cout << "Max word in ph2 is " << ph2.isMax() << endl;// Max word in ph2 is 5
+    cout << "Min word in ph2 is " << ph2.isMin() << endl;// Min word in ph2 is 3
 
 
-
+    /* полный вывод программы:
+        NO PHRASE
+        Hey, hello there!
+        Number of symbols in ph2 is 15
+        Max word in ph2 is 5
+        Min word in ph2 is 3
+    */
 
 
     return 0;
