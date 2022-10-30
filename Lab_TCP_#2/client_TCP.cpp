@@ -2,23 +2,27 @@
 #include <string.h>
 #include <winsock2.h>
 #include <windows.h>
+#include <locale.h>
 
 #pragma comment(lib,"ws2_32.lib")
 #define PORT 666
-#define SERVERADDR "127.0.0.1"
 
 int main(int argc, char* argv[])
 {
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
     char buff[1024];
-    //char SERVERADDR[256];
-    printf("TCP SERVER DEMO\n");
+    char SERVERADDR[64];
+    printf("TCP CLIENT DEMO\n");
+
+    printf("IP Server: ");
+    fgets(&SERVERADDR[0], sizeof(SERVERADDR)-1, stdin);
 
     if(WSAStartup(0x0202,(WSADATA *) &buff[0]))
     {
-        printf("WSAStartup error &d\n", WSAGetLastError());
+        printf("WSAStartup error %d\n", WSAGetLastError());
         return -1;
     }
-
     SOCKET my_sock;
     my_sock = socket(AF_INET,SOCK_STREAM,0);
     if (my_sock < 0)
@@ -53,18 +57,24 @@ int main(int argc, char* argv[])
         return -1;
     }
 
-    printf("Соединение c %s успешно установлено\n\
+    printf("Connection to %s successfully established\n\
     Type quit for quit\n\n",SERVERADDR);
 
     int nsize;
-    while((nsize = recv(my_sock,&buff[0],sizeof(buff)-1,0)
-             != SOCKET_ERROR)) 
+    while(1)
     {
+        nsize = recv(my_sock,&buff[0],sizeof(buff)-1,0);
+        if(nsize == SOCKET_ERROR)
+        {
+            printf("Exit...");
+            closesocket(my_sock);
+            WSACleanup();
+            return -1;
+        }
         buff[nsize] = 0;
 
-        printf("S=>C:%s", buff);
-
-        printf("S<=C:"); fgets(&buff[0],sizeof(buff)-1,stdin);
+        printf("S=>C: %s",buff);
+        printf("S<=C: "); fgets(&buff[0],sizeof(buff)-1,stdin);
 
         if (!strcmp(&buff[0],"quit\n"))
         {
@@ -76,9 +86,9 @@ int main(int argc, char* argv[])
 
         send(my_sock,&buff[0],nsize,0);
     }
-
     printf("Recv error %d\n",WSAGetLastError());
     closesocket(my_sock);
     WSACleanup();
     return -1;
 }
+
