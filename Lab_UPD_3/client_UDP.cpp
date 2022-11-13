@@ -5,7 +5,6 @@
   #pragma comment(lib, "ws2_32.lib")
 
   #define PORT 666
-  //#define SERVERADDR "127.0.0.1"
 
   int main(int argc, char* argv[])
   {

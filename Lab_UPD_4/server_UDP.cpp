@@ -1,11 +1,9 @@
-  
   #include <stdio.h>
   #include <winsock2.h>
   #pragma comment(lib, "ws2_32.lib")
 
   #define PORT 666   
   
-
   int main(int argc, char* argv[])
   {
     char buff[1024];
