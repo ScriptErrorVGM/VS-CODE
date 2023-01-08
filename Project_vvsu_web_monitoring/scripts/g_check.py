@@ -139,14 +139,20 @@ if __name__ == "__main__":
                 try:
                         response = requests.get(websites[0])
                         #print(response.status_code)
-                        df.at[index, 'status_code'] = "Site is available {} | ".format(response.status_code),current_time
+                        df.at[index, 'status_code'] = "Site is available {}".format(response.status_code)
+                        df.at[index, 'time_check'] = current_time
                 except:
-                        df.at[index, 'status_code'] = "Site is not available | ",current_time
+                        df.at[index, 'status_code'] = "Site is not available"
+                        df.at[index, 'time_check'] = current_time
                         #print('Website {} is not available'.format(websites[0]))
 
         print(df)
 
+        with open(f"{domain_name}_fail_try.csv", "a") as f:
+            if not(df[df['status_code'] == "Site is not available"].empty):
+                print(df[df['status_code'] == "Site is not available"], file=f)
 
+        
         df = pd.read_csv(f"C:/Users/Grigory/Documents/VS CODE/VS-CODE/Project_vvsu_web_monitoring/scripts/{domain_name}_external_links.csv", encoding='utf-8',header=None)
         
         for index, websites in df.iterrows():  
@@ -156,11 +162,17 @@ if __name__ == "__main__":
                 try:
                         response = requests.get(websites[0])
                         #print(response.status_code)
-                        df.at[index, 'status_code'] = "Site is available {} : | ".format(response.status_code,),current_time
+                        df.at[index, 'status_code'] = "Site is available {}".format(response.status_code,)
+                        df.at[index, 'time_check'] = current_time
                 except:
-                        df.at[index, 'status_code'] = "Site is not available | ",current_time
+                        df.at[index, 'status_code'] = "Site is not available"
+                        df.at[index, 'time_check'] = current_time
                         #print('Website {} is not available'.format(websites[0]))
 
         print(df)
+
+        with open(f"{domain_name}_fail_try.csv", "a") as f:
+            if not(df[df['status_code'] == "Site is not available"].empty):
+                print(df[df['status_code'] == "Site is not available"], file=f)
 
         time.sleep(10)
