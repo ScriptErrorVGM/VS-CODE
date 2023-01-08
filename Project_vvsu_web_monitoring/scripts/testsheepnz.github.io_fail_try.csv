@@ -1,6 +1,3 @@
-Empty DataFrame
-Columns: [0, status_code, time_check]
-Index: []
                                                  0            status_code time_check
 0                  https://twitter.com/TestSheepNZ  Site is not available   16:44:03
 1  https://www.linkedin.com/in/mike-talks-3423348/  Site is not available   16:44:31
