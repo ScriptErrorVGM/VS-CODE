@@ -5,7 +5,7 @@ import urllib.request
 import subprocess
 import pandas as pd
 
-df = pd.read_csv("C:/Users/Grigory/Documents/VS CODE/VS-CODE/Project_vvsu_web_monitoring/websites.csv", encoding='utf-8',header=None)
+df = pd.read_csv("C:/Users/Grigory/Documents/VS CODE/VS-CODE/Project_vvsu_web_monitoring/scripts/www.demoblaze.com_internal_links.csv", encoding='utf-8',header=None)
 #df.columns = df.iloc[0]
 #df.drop(index=0, inplace=True)
 print(df)
