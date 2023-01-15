@@ -55,7 +55,8 @@
     "map": "cpp",
     "set": "cpp",
     "cinttypes": "cpp",
-    "libsock": "cpp"
+    "libsock": "cpp",
+    "mutex": "cpp"
   },
   "C_Cpp_Runner.cCompilerPath": "C:/msys64/mingw64/bin/gcc.exe",
   "C_Cpp_Runner.cppCompilerPath": "g++",
