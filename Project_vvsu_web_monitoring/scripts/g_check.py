@@ -4,10 +4,7 @@ from bs4 import BeautifulSoup
 import colorama
 
 import requests
-import urllib.request
-import subprocess
 import pandas as pd
-import os
 
 import time
 from datetime import datetime
