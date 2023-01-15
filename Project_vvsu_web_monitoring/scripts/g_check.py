@@ -127,7 +127,7 @@ if __name__ == "__main__":
         
         
         
-        df = pd.read_csv(f"C:/Users/Grigory/Documents/VS CODE/VS-CODE/Project_vvsu_web_monitoring/scripts/{domain_name}_internal_links.csv", encoding='utf-8',header=None)
+        df = pd.read_csv(f"{domain_name}_internal_links.csv", encoding='utf-8',header=None)
         
         for index, websites in df.iterrows():
                 now = datetime.now()
@@ -150,7 +150,7 @@ if __name__ == "__main__":
                 print(df[df['status_code'] == "Site is not available"], file=f)
 
         
-        df = pd.read_csv(f"C:/Users/Grigory/Documents/VS CODE/VS-CODE/Project_vvsu_web_monitoring/scripts/{domain_name}_external_links.csv", encoding='utf-8',header=None)
+        df = pd.read_csv(f"{domain_name}_external_links.csv", encoding='utf-8',header=None)
         
         for index, websites in df.iterrows():  
                 now = datetime.now()
