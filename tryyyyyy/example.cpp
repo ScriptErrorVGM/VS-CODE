@@ -2,17 +2,19 @@
 
 using namespace std;
 
-void x(int a,int &b)
+class x
 {
-    a=a+b;
-    a=a-b;
-    b=b-a;
-}
+    private:
+    x(int i)
+    {
+        a = i; 
+    }
+    private:
+        int a;
+};
 
 
 int main()
 {
-    int a=4,b=10;
-    x(a,b);
-    cout << a << ", " << b;
+    x(5);
 }

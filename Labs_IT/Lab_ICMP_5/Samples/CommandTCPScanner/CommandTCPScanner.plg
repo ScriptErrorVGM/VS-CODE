@@ -1,0 +1,70 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: KomodiaIPUtils - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1.KOM\LOCALS~1\Temp\RSP8D9.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /I "..\\" /I "..\KomodiaDNS" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /Fp"Release/KomodiaIPUtils.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\dev\Komodia\KomodiaIPUtils\RealTimeTraceRouteSocket.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1.KOM\LOCALS~1\Temp\RSP8D9.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1.KOM\LOCALS~1\Temp\RSP8DA.tmp" with contents
+[
+/nologo /out:"Release\KomodiaIPUtils.lib" 
+.\Release\PingSocket.obj
+.\Release\RealTimeTraceRouteSocket.obj
+.\Release\Relay.obj
+.\Release\StdAfx.obj
+.\Release\TCPPortScanner.obj
+.\Release\TCPPortScannerLinear.obj
+.\Release\TCPPortScannerMultithreaded.obj
+.\Release\TCPPortScannerStealth.obj
+.\Release\TCPRelay.obj
+.\Release\TCPRelayHTTP.obj
+.\Release\TraceRouteSocket.obj
+.\Release\TraceRouteSocketReverseDNS.obj
+.\Release\UDPRelay.obj
+.\Release\UDPScanner.obj
+.\Release\WhoisSocket.obj
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\ADMINI~1.KOM\LOCALS~1\Temp\RSP8DA.tmp"
+<h3>Output Window</h3>
+Compiling...
+RealTimeTraceRouteSocket.cpp
+Creating library...
+<h3>
+--------------------Configuration: CommandTCPScanner - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1.KOM\LOCALS~1\Temp\RSP8DB.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /I "..\..\\" /I "..\..\KomodiaIPUtils" /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/CommandTCPScanner.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\dev\Komodia\Samples\CommandTCPScanner\CommandTCPScanner.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1.KOM\LOCALS~1\Temp\RSP8DB.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1.KOM\LOCALS~1\Temp\RSP8DC.tmp" with contents
+[
+KomodiaInfraLib.lib KomodiaTCPIPLib.lib KomodiaInfraLib.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:no /pdb:"Release/CommandTCPScanner.pdb" /machine:I386 /out:"Release/CommandTCPScanner.exe" /libpath:"..\..\KomodiaInfraLib\release" /libpath:"..\..\KomodiaTCPIPLib\release" /libpath:"..\..\KomodiaIPUtils\release" 
+.\Release\CommandTCPScanner.obj
+.\Release\StdAfx.obj
+\dev\Komodia\KomodiaInfraLib\Release\KomodiaInfraLib.lib
+\dev\Komodia\KomodiaIPUtils\Release\KomodiaIPUtils.lib
+\dev\Komodia\KomodiaTCPIPLib\Release\KomodiaTCPIPLib.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1.KOM\LOCALS~1\Temp\RSP8DC.tmp"
+<h3>Output Window</h3>
+Compiling...
+CommandTCPScanner.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+CommandTCPScanner.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,404 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\PacketCrafter.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\PacketCrafter.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 36
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About PacketCrafter"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,21,20
+    LTEXT           "PacketCrafter Version 1.4",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Komodia, Copyright (C) 2000-2003",IDC_STATIC,39,17,119,
+                    8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_PACKETCRAFTER_DIALOG DIALOGEX 0, 0, 372, 244
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Komodia's packet crafter"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "IPAddress1",IDC_FromAddress,"SysIPAddress32",WS_TABSTOP,
+                    75,14,138,12
+    EDITTEXT        IDC_SourcePort,286,13,54,13,ES_AUTOHSCROLL
+    CONTROL         "IPAddress1",IDC_ToAddress,"SysIPAddress32",WS_TABSTOP,
+                    75,29,138,12
+    EDITTEXT        IDC_DestinationPort,286,28,54,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_HeaderSize,75,48,87,13,ES_AUTOHSCROLL
+    CONTROL         "Default size",IDC_DefaultSize,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,170,48,66,8
+    EDITTEXT        IDC_Identification,75,66,87,13,ES_AUTOHSCROLL
+    CONTROL         "Random",IDC_DefaultIndentification,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,170,66,66,8
+    EDITTEXT        IDC_CheckSum,75,81,87,13,ES_AUTOHSCROLL
+    CONTROL         "Default checksum",IDC_DefaultChecksum,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,170,81,73,8
+    COMBOBOX        IDC_TypeOfService,75,98,89,86,CBS_DROPDOWNLIST | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_FragmentationType,75,113,89,62,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_Offset,75,132,87,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TTL,75,145,87,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DataSize,75,158,87,13,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Send IP packet",ID_SEND_IP,301,132,64,14
+    DEFPUSHBUTTON   "Send UDP packet",ID_SEND_UDP,301,148,64,14
+    DEFPUSHBUTTON   "Send TCP packet",ID_SEND_TCP,301,164,64,14
+    PUSHBUTTON      "Quit",IDCANCEL,301,180,64,14
+    LTEXT           "Source IP:",IDC_STATIC,17,14,36,10
+    LTEXT           "Destination IP:",IDC_STATIC,17,28,56,10
+    LTEXT           "Header size: (bytes)",IDC_STATIC,17,48,56,18
+    LTEXT           "Identification:",IDC_STATIC,17,66,56,8
+    LTEXT           "Type of service:",IDC_STATIC,17,98,56,8
+    LTEXT           "Fragmentation flags:",IDC_STATIC,17,110,56,19
+    LTEXT           "TTL:",IDC_STATIC,17,146,56,8
+    LTEXT           "Source port:",IDC_STATIC,219,15,45,8
+    LTEXT           "Destination port:",IDC_STATIC,219,30,59,8
+    LTEXT           "Checksum:",IDC_STATIC,17,81,56,8
+    LTEXT           "Offset:",IDC_STATIC,17,132,56,8
+    LTEXT           "Data size",IDC_STATIC,17,161,56,8
+    LTEXT           "www.komodia.com",IDC_HYPERLINK,203,132,62,8,WS_TABSTOP
+    LTEXT           "Visit us:",IDC_STATIC,170,132,31,8
+    LTEXT           "Data:",IDC_STATIC,17,175,26,8
+    EDITTEXT        IDC_DATA,75,172,87,55,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    WS_VSCROLL
+    DEFPUSHBUTTON   "Send ICMP packet",ID_SEND_ICMP,219,100,64,14,NOT 
+                    WS_VISIBLE
+END
+
+IDD_UDP_DIALOG DIALOG DISCARDABLE  0, 0, 235, 63
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "UDP parameters"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_CheckSum,75,20,87,13,ES_AUTOHSCROLL
+    CONTROL         "Default checksum",IDC_DefaultUDPChecksum,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,37,73,8
+    DEFPUSHBUTTON   "Send",ID_UDP,178,7,50,14
+    PUSHBUTTON      "Back",IDCANCEL,178,24,50,14
+    LTEXT           "UDP checksum:",IDC_STATIC,13,22,56,8
+END
+
+IDD_TCP_DIALOG DIALOG DISCARDABLE  0, 0, 320, 126
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "TCP parameters"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "URG",IDC_URG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,35,
+                    14,29,8
+    CONTROL         "ACK",IDC_ACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,67,
+                    15,25,8
+    CONTROL         "PSH",IDC_PUSH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,95,
+                    15,29,8
+    CONTROL         "RST",IDC_RESET,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    125,15,26,8
+    CONTROL         "SYN",IDC_SYN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,153,
+                    15,29,8
+    CONTROL         "FIN",IDC_FIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,183,
+                    15,29,8
+    EDITTEXT        IDC_SEQUENCE,76,31,61,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ACKNOWLEDGE,76,45,61,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_WINDOW,76,58,61,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_URGENT,76,71,61,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TCPOFFSET,76,84,61,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TCPCheckSum,76,96,62,13,ES_AUTOHSCROLL
+    CONTROL         "Default checksum",IDC_DefaultTCPChecksum,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,142,98,73,8
+    DEFPUSHBUTTON   "Send",IDOK,263,7,50,14
+    PUSHBUTTON      "Back",IDCANCEL,263,24,50,14
+    LTEXT           "Flags:",IDC_STATIC,13,14,22,9
+    LTEXT           "Acknowledge:",IDC_STATIC,13,45,49,10
+    LTEXT           "Sequence:",IDC_STATIC,14,31,49,10
+    LTEXT           "Window:",IDC_STATIC,13,58,49,10
+    LTEXT           "Urgent",IDC_STATIC,13,71,49,10
+    LTEXT           "Offset:",IDC_STATIC,13,84,49,10
+    LTEXT           "TCP checksum:",IDC_STATIC,14,98,56,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "PacketCrafter MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "PacketCrafter\0"
+            VALUE "LegalCopyright", "Copyright (C) 2001\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "PacketCrafter.EXE\0"
+            VALUE "ProductName", "PacketCrafter Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 29
+    END
+
+    IDD_PACKETCRAFTER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 365
+        VERTGUIDE, 17
+        VERTGUIDE, 75
+        VERTGUIDE, 170
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 237
+        HORZGUIDE, 48
+        HORZGUIDE, 66
+        HORZGUIDE, 81
+        HORZGUIDE, 132
+    END
+
+    IDD_UDP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_TCP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 119
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_PACKETCRAFTER_DIALOG DLGINIT
+BEGIN
+    IDC_TypeOfService, 0x403, 8, 0
+0x6f52, 0x7475, 0x6e69, 0x0065, 
+    IDC_TypeOfService, 0x403, 9, 0
+0x7250, 0x6f69, 0x6972, 0x7974, "\000" 
+    IDC_TypeOfService, 0x403, 10, 0
+0x6d49, 0x656d, 0x6964, 0x7461, 0x0065, 
+    IDC_TypeOfService, 0x403, 6, 0
+0x6c46, 0x7361, 0x0068, 
+    IDC_TypeOfService, 0x403, 14, 0
+0x6c46, 0x7361, 0x2068, 0x766f, 0x7265, 0x6469, 0x0065, 
+    IDC_TypeOfService, 0x403, 11, 0
+0x7243, 0x7469, 0x6369, 0x4520, 0x5043, "\000" 
+    IDC_TypeOfService, 0x403, 21, 0
+0x6e49, 0x6574, 0x6e72, 0x7465, 0x6f77, 0x6b72, 0x6320, 0x6e6f, 0x7274, 
+0x6c6f, "\000" 
+    IDC_TypeOfService, 0x403, 16, 0
+0x654e, 0x7774, 0x726f, 0x206b, 0x6f63, 0x746e, 0x6f72, 0x006c, 
+    IDC_FragmentationType, 0x403, 9, 0
+0x614d, 0x2079, 0x7266, 0x6761, "\000" 
+    IDC_FragmentationType, 0x403, 10, 0
+0x6f4d, 0x6572, 0x6620, 0x6172, 0x0067, 
+    IDC_FragmentationType, 0x403, 10, 0
+0x614c, 0x7473, 0x6620, 0x6172, 0x0067, 
+    IDC_FragmentationType, 0x403, 11, 0
+0x6f44, 0x276e, 0x2074, 0x7266, 0x6761, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About PacketCrafter..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Unknown language: 0xD, 0x1 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_HEB)
+#ifdef _WIN32
+LANGUAGE 0xD, 0x1
+#pragma code_page(1255)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ICMP_DIALOG DIALOG DISCARDABLE  0, 0, 320, 201
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,263,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,263,24,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ICMP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Unknown language: 0xD, 0x1 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\PacketCrafter.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

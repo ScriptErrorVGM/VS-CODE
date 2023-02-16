@@ -1,0 +1,90 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "KomodiaIPUtils"=..\..\KomodiaIPUtils\KomodiaIPUtils.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Komodia/KomodiaIPUtils", WTBAAAAA
+    ..\..\komodiaiputils
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "KomodiaInfraLib"=..\..\KomodiaInfraLib\KomodiaInfraLib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Komodia/KomodiaInfraLib", AQAAAAAA
+    ..\..
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "KomodiaTCPIPLib"=..\..\KomodiaTCPIPLib\KomodiaTCPIPLib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Komodia/KomodiaTCPIPLib", QABAAAAA
+    ..\..
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "KomodiaTracert"=.\KomodiaTracert.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Komodia/Samples/KomodiaTracert", NUBAAAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name KomodiaInfraLib
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name KomodiaIPUtils
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name KomodiaTCPIPLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+
