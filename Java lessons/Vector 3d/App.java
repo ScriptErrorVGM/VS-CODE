@@ -3,6 +3,7 @@ public class App {
         Vector3D[] vectors = Vector3D.generate(10);
         Vector3D vectorA = new Vector3D(10, 50, -30);
         Vector3D vectorB = new Vector3D(60, -10, 35);
+        
         System.out.format("A vector's axis is %s.\n", vectorA);
         System.out.format("B vector's axis is %s.\n", vectorB);
         System.out.format("A vector's length is %s.\n", vectorA.getModule());
