@@ -16,7 +16,7 @@ public class Test {
 
         System.out.println(mystack.isSame(3));
         System.out.println(mystack.isSame(2));
-        
+
         System.out.println("My array list : " + mystack.toString());
 
     }
