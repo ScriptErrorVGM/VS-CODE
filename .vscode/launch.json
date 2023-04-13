@@ -3,6 +3,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "MainFree",
+      "request": "launch",
+      "mainClass": "MainFree",
+      "projectName": "VS-CODE_398c326"
+    },
+    {
+      "type": "java",
+      "name": "FreeType",
+      "request": "launch",
+      "mainClass": "FreeType",
+      "projectName": "VS-CODE_398c326"
+    },
+    {
+      "type": "java",
+      "name": "FreeClass",
+      "request": "launch",
+      "mainClass": "FreeClass",
+      "projectName": "VS-CODE_398c326"
+    },
+    {
+      "type": "java",
       "name": "Test",
       "request": "launch",
       "mainClass": "Test",
