@@ -1,5 +1,3 @@
-package Java lessons.Checker-Function;
-
 import java.util.regex.*;
 public class Correct_func {
     

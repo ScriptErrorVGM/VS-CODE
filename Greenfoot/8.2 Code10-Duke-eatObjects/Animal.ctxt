@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Animal
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Animal\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Animal\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=
+comment2.target=boolean\ atWorldEdge()
+comment2.text=\r\n\ Test\ if\ we\ are\ close\ to\ one\ of\ the\ edges\ of\ the\ world.\ Return\ true\ if\ the\ object\ is.\ \r\n
+comment3.params=clss
+comment3.target=boolean\ canSee(java.lang.Class)
+comment3.text=\r\n\ Return\ true\ if\ the\ class\ can\ see\ an\ instance\ of\ class\ 'clss'\ right\ where\ it\ is.\ False\ if\ there\ is\ no\ \r\n\ instance\ there.\ \r\n
+comment4.params=clss
+comment4.target=void\ eat(java.lang.Class)
+comment4.text=\r\n\ Eat\ an\ instance\ of\ 'clss'\ if\ there\ is\ an\ instance\ in\ the\ same\ position\ as\ the\ class.\ Otherwise,\ do\ nothing.\ \r\n
+numComments=5
