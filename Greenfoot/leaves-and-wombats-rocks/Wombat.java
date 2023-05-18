@@ -12,6 +12,7 @@ public class Wombat extends Actor
     private int leavesEaten;
     int rotationalSpeed = 1;
     int radius = 2; // adjust as needed
+    private int angle = 0;
     public Wombat()
     {   
         leavesEaten = 0;
@@ -36,15 +37,28 @@ public class Wombat extends Actor
     }
     
     public void checkRocks(){
+        Rock rock = (Rock)getOneIntersectingObject(Rock.class);
         if(!getIntersectingObjects(Rock.class).isEmpty()){
             if (Greenfoot.getRandomNumber(100) < 50)
             {   
-                int[] nums = new int[] { -90, 90};
+                
+                setLocation(rock.getX(), rock.getY());
+                turn(angle++);
+                move(2);
+                //turn(0);
+                /*for (int i=90; i>0; i = i-10){
+                    move(1);
+                    turn(i);
+                    //Greenfoot.delay(1);
+                }*/
+                /*int[] nums = new int[] { -90, 90};
                 turn(nums[Greenfoot.getRandomNumber(nums.length)]);
-                move(2);
+                move(1);
                 turn(-nums[Greenfoot.getRandomNumber(nums.length)]);
-                move(2);
+                move(1);
                 turn(-nums[Greenfoot.getRandomNumber(nums.length)]);
+                */
+                
             }
             //turn(-90);
             //move();// adjust 'orbital distance' value as needed
@@ -79,9 +93,9 @@ public class Wombat extends Actor
     {   
         if (Greenfoot.getRandomNumber(100) < 10)
         {   
-            turn(90);
-            //int[] nums = new int[] { -90, 90};
-            //turn(nums[Greenfoot.getRandomNumber(nums.length)]);
+            //turn(90);
+            int[] nums = new int[] { -90, 90};
+            turn(nums[Greenfoot.getRandomNumber(nums.length)]);
         }
     }
        

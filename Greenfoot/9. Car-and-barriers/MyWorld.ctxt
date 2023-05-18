@@ -8,6 +8,4 @@ comment2.params=
 comment2.target=void\ create()
 comment3.params=
 comment3.target=void\ gameOver()
-comment4.params=
-comment4.target=void\ backgroundMusic()
-numComments=5
+numComments=4

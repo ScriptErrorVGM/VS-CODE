@@ -16,11 +16,9 @@ public class MyWorld extends World
      */
     public MyWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1);
         setBackground("asphalt.jpg");
         create();
-        backgroundMusic(); 
     }
     
     public void create() {
@@ -61,24 +59,13 @@ public class MyWorld extends World
         addObject(barrier13,730,440);
         Barrier barrier14 = new Barrier();
         addObject(barrier14,590,440);
+        
+        BackMusic music = new BackMusic();
+        addObject(music,0,0);
     }
     
     public void gameOver() 
     {
         addObject(new GameOver(), getWidth()/2, getHeight()/2);
-    }
-    
-    //GreenfootSound music = new GreenfootSound("BackgroundMusic.mp3");
-    public void backgroundMusic() 
-    {
-        //if(MyWorld.started != true){
-            
-        if(getObjects(Car.class).size() == 1){
-            ambient.playLoop(); 
-        }else if (getObjects(Car.class).size() < 1){
-            ambient.stop();  
-            gameover.playLoop();
-        }
-    
     }
 }

@@ -26,13 +26,14 @@ public class WombatWorld extends World
      */    
     public void populate()
     {
-        addObject(new Wombat(), 30, 20);
-        addObject(new Wombat(), 6, 6);
-        addObject(new Wombat(), 1, 7);
+        
         addObject(new Leaf(),10,10);
         addObject(new Rock(),2,2);
         randomLeaves(10);
         randomRocks(4);
+        addObject(new Wombat(), 30, 20);
+        addObject(new Wombat(), 6, 6);
+        addObject(new Wombat(), 1, 7);
     }
     
     /**

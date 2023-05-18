@@ -14,14 +14,12 @@ public class crash extends Actor
      */
     public void crash()
     {
-        
         initializeImages();
     }
     
     public synchronized static void initializeImages() 
     {
         GreenfootImage baseImage = new GreenfootImage("crash.png");
-        
     }
 }
 
