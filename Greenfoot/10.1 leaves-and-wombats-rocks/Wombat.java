@@ -37,39 +37,51 @@ public class Wombat extends Actor
     }
     
     public void checkRocks(){
-        Rock rock = (Rock)getOneIntersectingObject(Rock.class);
+        if ( !isPath(leftEyeColor()) )
+        {
+            turn(7);
+        }
+        else if ( !isPath(rightEyeColor()) )
+        {
+            turn(-7);
+        }
+        move(2);
+        /*Rock rock = (Rock)getOneIntersectingObject(Rock.class);
         if(!getIntersectingObjects(Rock.class).isEmpty()){
+            
             if (Greenfoot.getRandomNumber(100) < 50)
             {   
                 
-                setLocation(rock.getX(), rock.getY());
-                turn(angle++);
-                move(2);
+                //setLocation(rock.getX(), rock.getY());
+                turn(-7);
+                move(1);
+                //turn(7);
                 //turn(0);
-                /*for (int i=90; i>0; i = i-10){
+                for (int i=90; i>0; i = i-10){
                     move(1);
                     turn(i);
                     //Greenfoot.delay(1);
-                }*/
-                /*int[] nums = new int[] { -90, 90};
+                }
+                int[] nums = new int[] { -90, 90};
                 turn(nums[Greenfoot.getRandomNumber(nums.length)]);
                 move(1);
                 turn(-nums[Greenfoot.getRandomNumber(nums.length)]);
                 move(1);
                 turn(-nums[Greenfoot.getRandomNumber(nums.length)]);
-                */
+                
                 
             }
+            
             //turn(-90);
             //move();// adjust 'orbital distance' value as needed
             //turn(90);
             //move(1);
             //turn(90);
-            /*turn(90);
+            turn(90);
             if(getIntersectingObjects(Rock.class).isEmpty()){
                 turn(-45);
-            }*/
-        }
+            }
+        }*/
     }
     
     public void checkEnd(){
@@ -160,12 +172,32 @@ public class Wombat extends Actor
         
         return !facingEdge;
     }
-
+    
+    private boolean isPath (Color col)
+    {
+        return col.getRed() > 160;   // path colour has at least this much red in it
+    }
+    
     /**
      * Tell how many leaves we have eaten.
      */
     public int getLeavesEaten()
     {
         return leavesEaten;
+    }
+    
+    private Color leftEyeColor()
+    {
+        Point eyePos = leftEye();
+        return getWorld().getBackground().getColorAt (eyePos.getX(), eyePos.getY());
+    }
+
+    /**
+     * Return the color under the right eye.
+     */
+    private Color rightEyeColor()
+    {
+        Point eyePos = rightEye();
+        return getWorld().getBackground().getColorAt (eyePos.getX(), eyePos.getY());
     }
 }
