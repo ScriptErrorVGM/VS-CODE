@@ -17,5 +17,11 @@ public class Box extends World
         setPaintOrder ( Ball.class, Smoke.class ); // paint ball on top
         
         addObject ( new Ball(), getWidth() / 2, getHeight() / 2);
+        addObject ( new switchColor(), 50, 50);
+        addObject ( new switchColor(), 150, 150);
+        addObject ( new switchColor(), 250, 250);
+        addObject ( new switchColor(), 10, 50);
+        //addObject ( new switchSize(), 100, 100);
+        ///addObject ( new switchSpeed(), 150, 150);
     }
 }

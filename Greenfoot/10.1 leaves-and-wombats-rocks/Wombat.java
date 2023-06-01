@@ -37,31 +37,26 @@ public class Wombat extends Actor
     }
     
     public void checkRocks(){
-        if ( !isPath(leftEyeColor()) )
-        {
-            turn(7);
-        }
-        else if ( !isPath(rightEyeColor()) )
-        {
-            turn(-7);
-        }
-        move(2);
-        /*Rock rock = (Rock)getOneIntersectingObject(Rock.class);
-        if(!getIntersectingObjects(Rock.class).isEmpty()){
-            
-            if (Greenfoot.getRandomNumber(100) < 50)
+        //Rock rock = (Rock)getOneIntersectingObject(Rock.class);
+        //if(!getIntersectingObjects(Rock.class).isEmpty()){
+        if(isTouching(Rock.class)){
+            turn(-90);
+            move(1);
+            //Greenfoot.delay(2);
+            turn(90);
+            move(1);
+            //Greenfoot.delay(2);
+            turn(90);
+            move(1);
+            //Greenfoot.delay(2);
+            turn(-90);
+            move(1);
+            /*if (Greenfoot.getRandomNumber(100) < 50)
             {   
-                
-                //setLocation(rock.getX(), rock.getY());
                 turn(-7);
                 move(1);
-                //turn(7);
-                //turn(0);
-                for (int i=90; i>0; i = i-10){
-                    move(1);
-                    turn(i);
-                    //Greenfoot.delay(1);
-                }
+                turn(7);
+                
                 int[] nums = new int[] { -90, 90};
                 turn(nums[Greenfoot.getRandomNumber(nums.length)]);
                 move(1);
@@ -70,18 +65,15 @@ public class Wombat extends Actor
                 turn(-nums[Greenfoot.getRandomNumber(nums.length)]);
                 
                 
-            }
+            }*/
             
             //turn(-90);
             //move();// adjust 'orbital distance' value as needed
             //turn(90);
             //move(1);
             //turn(90);
-            turn(90);
-            if(getIntersectingObjects(Rock.class).isEmpty()){
-                turn(-45);
-            }
-        }*/
+            //turn(90);
+        }
     }
     
     public void checkEnd(){
@@ -186,18 +178,4 @@ public class Wombat extends Actor
         return leavesEaten;
     }
     
-    private Color leftEyeColor()
-    {
-        Point eyePos = leftEye();
-        return getWorld().getBackground().getColorAt (eyePos.getX(), eyePos.getY());
-    }
-
-    /**
-     * Return the color under the right eye.
-     */
-    private Color rightEyeColor()
-    {
-        Point eyePos = rightEye();
-        return getWorld().getBackground().getColorAt (eyePos.getX(), eyePos.getY());
-    }
 }
