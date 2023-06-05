@@ -26,6 +26,9 @@ print(opt.x)
 print(opt.slack)
 print(opt.fun)'''
 
+
+#----------------------------------------------------------------------#
+
 obj = -np.random.randint(10,50, size=3*12)
 print(obj)
 
