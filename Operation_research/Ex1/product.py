@@ -19,23 +19,23 @@ opt = linprog(c=obj, A_ub=L_ineq, b_ub=R_ineq,
 
 
 print('#1 try\n')
-print(opt)
-'''
+#print(opt)
+
 print(opt.message)
 print(opt.x)
 print(opt.slack)
-print(opt.fun)'''
+print(opt.fun)
 
 
 #----------------------------------------------------------------------#
 
 obj = -np.random.randint(10,50, size=3*12)
-print(obj)
+#print(obj)
 
 L_ineq = np.random.randint(10,size=(12,12*3))       #Manpower
                                                     #Material A
                                                     #Material B
-print(L_ineq)
+#print(L_ineq)
 
 R_ineq = np.random.randint(100,1000, size=12)  #Manpower
             #Material A
@@ -46,10 +46,10 @@ print(R_ineq)
 opt = linprog(c=obj, A_ub=L_ineq, b_ub=R_ineq,
               method="revised simplex")
 
-print('#2 try\n')
-print(opt)
-print(opt.x)
-'''print(opt.message)
+print('#2 try--------------------------------------\n')
+#print(opt)
+#print(opt.x)
+print(opt.message)
 print(opt.x)
 print(opt.slack)
-print(opt.fun)'''
+print(opt.fun)
