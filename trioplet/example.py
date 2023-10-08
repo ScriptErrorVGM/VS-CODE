@@ -1,9 +1,4 @@
-a1 = int(input())
-a2 = int(input())
-b1 = int(input())
-b2 = int(input())
-
-if(a1 == b1) or (a2 == b2):
-    print('YES')
-else:
-    print('NO')
+a, b = int(input()), int(input())
+for i in range(a, (b + 1)):
+    if str(i)[:2] == str(i)[:1:-1]:
+        print(i)

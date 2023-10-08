@@ -79,8 +79,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Grigory/Documents/VS CODE/VS-CODE",
-      "program": "c:/Users/Grigory/Documents/VS CODE/VS-CODE/build/Debug/outDebug",
+      "cwd": ".",
+      "program": "build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
