@@ -18,7 +18,7 @@ opt = linprog(c=obj, A_ub=L_ineq, b_ub=R_ineq,
               method="revised simplex")
 
 
-print('#1 try\n')
+print('#1 try ==============================\n')
 #print(opt)
 
 print(opt.message)
@@ -46,9 +46,8 @@ print(R_ineq)
 opt = linprog(c=obj, A_ub=L_ineq, b_ub=R_ineq,
               method="revised simplex")
 
-print('#2 try--------------------------------------\n')
-#print(opt)
-#print(opt.x)
+print('#2 try ==============================\n')
+
 print(opt.message)
 print(opt.x)
 print(opt.slack)
