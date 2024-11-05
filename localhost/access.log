@@ -1,0 +1,4 @@
+::1 - - [05/Nov/2024:22:44:29 +1000] "GET /index.php HTTP/1.1" 404 196
+::1 - - [05/Nov/2024:22:45:11 +1000] "GET /Web%20APP/OOP%20lessons/Lesson1/index.php HTTP/1.1" 200 869
+::1 - - [05/Nov/2024:22:45:11 +1000] "GET /Web%20APP/OOP%20lessons/Lesson1/css/style.css HTTP/1.1" 404 196
+::1 - - [05/Nov/2024:22:45:11 +1000] "GET /Web%20APP/OOP%20lessons/Lesson1/javascrpit/script.js HTTP/1.1" 404 196
